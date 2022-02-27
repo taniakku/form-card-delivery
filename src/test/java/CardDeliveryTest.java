@@ -28,7 +28,7 @@ public class CardDeliveryTest {
         $(byClassName("checkbox__box")).click();
         $(byText("Забронировать")).click();
 
-        $(withText("Успешно!")).should(appear, Duration.ofSeconds(10));
+        $(withText("Успешно!")).should(appear, Duration.ofSeconds(15));
 
     }
 
