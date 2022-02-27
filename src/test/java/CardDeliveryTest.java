@@ -18,7 +18,7 @@ public class CardDeliveryTest {
 
         open("http://0.0.0.0:9999");
         $("[placeholder='Город']").val("Санкт-Петербург");
-        $("[placeholder='Дата встречи']").val("02.03.2022"); //дата +3 дня от текущей проставляется автоматически
+        $("[placeholder='Дата встречи']").val("02.03.2022");
         $(byName("name")).val("Пушкина Анна-Мария");
         $("[name='phone']").val("+79119786655");
         $(byClassName("checkbox__box")).click();
