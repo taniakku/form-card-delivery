@@ -31,7 +31,7 @@ public class CardDeliveryTest {
         $(byClassName("checkbox__box")).click();
         $(byText("Забронировать")).click();
 
-        $(withText("Успешно!")).should(appear, Duration.ofSeconds(15));
+        $(withText("Успешно!")).should(appear, Duration.ofSeconds(1));
         $("[class='notification__content']").shouldHave(Condition.text("Встреча успешно забронирована на " + orderDate), Duration.ofSeconds(15));
 
 
