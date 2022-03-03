@@ -1,6 +1,7 @@
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.Keys;
 
 import java.time.Duration;
 import java.time.LocalDate;
@@ -21,10 +22,11 @@ public class CardDeliveryTest {
     void ShouldSendForm() {
         Configuration.holdBrowserOpen = true;
 
-        String orderDate = generateDate(3);
+        String orderDate = generateDate(5);
 
         open("http://localhost:9999");
         $("[data-test-id='city'] input").val("Санкт-Петербург");
+        $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
         $("[data-test-id='date'] input").setValue(orderDate);
         $(byName("name")).val("Пушкина Анна-Мария");
         $("[name='phone']").val("+79119786655");
